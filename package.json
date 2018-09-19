@@ -8,6 +8,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "babel": "6.23.0",
     "babel-plugin-transform-class-properties": "6.24.1",
     "dayjs": "1.7.5",
     "gray-matter": "4.0.1",

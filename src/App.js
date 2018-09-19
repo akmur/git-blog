@@ -8,9 +8,13 @@ const useHash = false // Defaults to: false
 const router = new Navigo(root, useHash)
 
 export default class App extends Component {
-  state = {
-    posts: [],
-    template: ''
+  constructor() {
+    super()
+
+    this.state = {
+      posts: [],
+      template: ''
+    }
   }
 
   componentWillMount() {
