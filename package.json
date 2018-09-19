@@ -1,0 +1,23 @@
+{
+  "name": "git-powered-preact-blog",
+  "version": "1.0.0",
+  "description": "Git Powered Preact Blog",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "dayjs": "1.7.5",
+    "gray-matter": "4.0.1",
+    "markdown": "0.5.0",
+    "navigo": "7.1.2",
+    "preact": "8.3.1",
+    "preact-html-converter": "0.4.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}
