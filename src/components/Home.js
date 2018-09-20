@@ -1,7 +1,5 @@
-import { h, render, Component } from 'preact'
+import render from '../helpers/render'
 
-export default class Home extends Component {
-  render() {
-    return <div>Home</div>
-  }
+export default function Home() {
+  render('#content', '<div>Home</div>')
 }

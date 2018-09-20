@@ -1,50 +1,36 @@
-import { h, render, Component } from 'preact'
 import Header from './components/Header'
-import loadTemplate from './helpers/loadTemplate'
+import About from './components/About'
+import Contacts from './components/Contacts'
+import PostsList from './components/PostsList'
+import PostSingle from './components/PostSingle'
+import Home from './components/Home'
+import render from './helpers/render'
 
 import Navigo from 'navigo'
 const root = null
 const useHash = false // Defaults to: false
 const router = new Navigo(root, useHash)
 
-export default class App extends Component {
-  constructor() {
-    super()
+export default function App() {
+  document.querySelector('#nav').innerHTML = Header()
 
-    this.state = {
-      posts: [],
-      template: ''
-    }
-  }
-
-  componentWillMount() {
-    router
-      .on({
-        about: function() {
-          this.setState({ template: loadTemplate('about') })
-        }.bind(this),
-        contacts: function() {
-          this.setState({ template: loadTemplate('contacts') })
-        }.bind(this),
-        posts: function() {
-          this.setState({ template: loadTemplate('posts') })
-        }.bind(this),
-        'posts/:slug': function(params) {
-          this.setState({ template: loadTemplate('single', params.slug) })
-        }.bind(this),
-        '': function() {
-          this.setState({ template: loadTemplate('home') })
-        }.bind(this)
-      })
-      .resolve()
-  }
-
-  render() {
-    return (
-      <div>
-        <Header />
-        {this.state.template}
-      </div>
-    )
-  }
+  router
+    .on({
+      about: function() {
+        About()
+      },
+      contacts: function() {
+        Contacts()
+      },
+      posts: function() {
+        PostsList()
+      },
+      'posts/:slug': function(params) {
+        PostSingle(params.slug)
+      },
+      '': function() {
+        Home()
+      }
+    })
+    .resolve()
 }

@@ -1,7 +1,5 @@
-import { h, render, Component } from 'preact'
+import render from '../helpers/render'
 
-export default class Contacts extends Component {
-  render() {
-    return <div>Contacts</div>
-  }
+export default function Contacts() {
+  render('#content', '<div>Contacts</div>')
 }
