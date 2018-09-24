@@ -3,7 +3,8 @@ import render from '../helpers/render'
 
 export default function PostsList() {
   getPostsListJson().then(response => {
-    const posts = response.reverse()
+    const posts = response
+      .reverse()
       .map((item, index) => {
         const itemLink = `/#!/posts/${item.githubLink}`
         const itemTitle = item.title
