@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "dayjs": "1.7.5",
-    "gray-matter": "4.0.1",
     "markdown": "0.5.0",
     "navigo": "7.1.2"
   },
