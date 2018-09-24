@@ -6,8 +6,14 @@ run
 npm install
 ```
 
-then
+then to start a development server
 
 ```
 npm run start
+```
+
+and to build
+
+```
+npm run build
 ```
