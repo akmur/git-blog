@@ -5,13 +5,15 @@ function fetchUrl(url) {
     .then(response => response.json())
     .then(myJson => {
       sessionStorage.setItem('postsList', JSON.stringify(myJson))
-      return myJson.map(item => {
-        return {
-          title: onlyTitle(item.name),
-          date: onlyDate(item.name),
-          githubLink: removeExtension(item.name)
-        }
-      })
+      return myJson
+        .map(item => {
+          return {
+            title: onlyTitle(item.name),
+            date: onlyDate(item.name),
+            githubLink: removeExtension(item.name)
+          }
+        })
+        .reverse()
     })
 }
 
@@ -21,14 +23,16 @@ function fetchSession(storedJson) {
   })
 
   return sessionPromise.then(sessionJSON => {
-    const myJson = JSON.parse(sessionJSON).reverse()
-    return myJson.map(item => {
-      return {
-        title: onlyTitle(item.name),
-        date: onlyDate(item.name),
-        githubLink: removeExtension(item.name)
-      }
-    })
+    const myJson = JSON.parse(sessionJSON)
+    return myJson
+      .map(item => {
+        return {
+          title: onlyTitle(item.name),
+          date: onlyDate(item.name),
+          githubLink: removeExtension(item.name)
+        }
+      })
+      .reverse()
   })
 }
 

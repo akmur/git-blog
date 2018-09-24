@@ -5,7 +5,6 @@ export default function PostsList() {
   document.title = `Posts - Alessandro Muraro - Frontend Developer`
   getPostsListJson().then(response => {
     const posts = response
-      .reverse()
       .map((item, index) => {
         const itemLink = `/#!/posts/${item.githubLink}`
         const itemTitle = item.title
