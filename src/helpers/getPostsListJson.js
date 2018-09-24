@@ -9,7 +9,7 @@ function fetchUrl(url) {
         return {
           title: onlyTitle(item.name),
           date: onlyDate(item.name),
-          githubLink: item.name
+          githubLink: removeExtension(item.name)
         }
       })
     })
