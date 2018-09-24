@@ -3,9 +3,9 @@ import render from '../helpers/render'
 
 export default function PostsList() {
   getPostsListJson().then(response => {
-    const posts = response
+    const posts = response.reverse()
       .map((item, index) => {
-        const itemLink = `/posts/${item.githubLink}`
+        const itemLink = `/#!/posts/${item.githubLink}`
         const itemTitle = item.title
         const itemDate = item.date
         return `

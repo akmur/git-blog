@@ -1,15 +1,17 @@
 import render from '../helpers/render'
+import { onlyTitle, onlyDate, removeExtension } from '../helpers/utils'
 import { getPostJson } from '../helpers/getPostJson'
 import { markdown } from 'markdown'
 import dayjs from 'dayjs'
-const matter = require('gray-matter')
+import relativeTime from 'dayjs/plugin/relativeTime'
+dayjs.extend(relativeTime)
 
 export default function PostSingle(githubLink) {
-  getPostJson(githubLink).then(response => {
-    const meta = matter(response)
-    const title = meta.data.title.replace(/^\w/, c => c.toUpperCase())
-    const date = dayjs(meta.data.date).format('DD/MM/YYYY')
-    const content = markdown.toHTML(response)
+  getPostJson(githubLink).then(item => {
+    // const meta = matter(item)
+    const title = onlyTitle(githubLink)
+    const date = dayjs().to(dayjs(onlyDate(githubLink)))
+    const content = markdown.toHTML(item)
 
     const html = `
       <div class="post">
