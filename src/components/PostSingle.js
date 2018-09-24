@@ -12,6 +12,7 @@ export default function PostSingle(githubLink) {
     const title = onlyTitle(githubLink)
     const date = dayjs().to(dayjs(onlyDate(githubLink)))
     const content = markdown.toHTML(item)
+    document.title = `${title} - Alessandro Muraro - Frontend Developer`
 
     const html = `
       <div class="post">
