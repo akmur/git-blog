@@ -104,3 +104,4 @@ config.codekit*
 yarn.lock
 .cache/
 package-lock.json
+.openode
