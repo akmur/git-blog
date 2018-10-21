@@ -2,7 +2,12 @@
   display: inline-block;
   margin: 0 0.25em;
   cursor: default;
-  animation: wave 250ms ease-in-out 5 alternate;
+  animation: wave 250ms ease-in-out infinite alternate;
+  animation-play-state: paused; 
+
+  &:hover {
+    animation-play-state: running;
+  }
 }
 
 @keyframes wave {

@@ -42,10 +42,8 @@ export function getPostsListJson(slug) {
 
   // check if value is in local storage
   if (storedJson) {
-    console.log('session')
     return fetchSession(storedJson)
   } else {
-    console.log('fetch')
     return fetchUrl(url)
   }
 }

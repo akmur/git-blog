@@ -375,7 +375,7 @@ body {
   line-height: 1.618;
   margin: auto; }
 
-@media (max-width: 684px) {
+@media (max-width: 768px) {
   body {
     font-size: 1.53rem; } }
 
@@ -531,9 +531,7 @@ input[type='button'][disabled] {
   cursor: default;
   opacity: 0.5; }
 
-.button:focus,
 .button:hover,
-button:focus,
 button:hover,
 input[type='submit']:focus,
 input[type='submit']:hover,
@@ -545,9 +543,7 @@ input[type='button']:hover {
   border-color: #cb4855;
   color: #f9f9f9;
   outline: 0; }
-  .ui-dark .button:focus, .ui-dark
-  .button:hover, .ui-dark
-  button:focus, .ui-dark
+  .ui-dark .button:hover, .ui-dark
   button:hover, .ui-dark
   input[type='submit']:focus, .ui-dark
   input[type='submit']:hover, .ui-dark
@@ -606,7 +602,7 @@ fieldset {
 
 .contentBlock__preTitle {
   color: #ff5349;
-  font-size: 1.25rem;
+  font-size: 1.125em;
   font-weight: 700;
   margin-bottom: 0.5em;
   text-transform: uppercase; }
@@ -660,7 +656,10 @@ fieldset {
   display: inline-block;
   margin: 0 0.25em;
   cursor: default;
-  animation: wave 250ms ease-in-out 5 alternate; }
+  animation: wave 250ms ease-in-out infinite alternate;
+  animation-play-state: paused; }
+  .emoji:hover {
+    animation-play-state: running; }
 
 @keyframes wave {
   0% {
@@ -759,6 +758,8 @@ fieldset {
   padding-top: 1em; }
   .postsList__link:hover {
     color: #ff5349; }
+    .ui-dark .postsList__link:hover {
+      color: #cb4855; }
 
 .postsList__title {
   display: block;
@@ -792,13 +793,20 @@ fieldset {
   @media screen and (min-width: 768px) {
     .wrapper {
       padding: 0; } }
-  .wrapper.ui-dark {
+  .ui-dark .wrapper {
     background-color: #212121;
-    color: #d6d6d6; }
+    color: #d6d6d6;
+    border-top: 4px solid #cb4855; }
 
 code.hljs {
   border-radius: 0.5rem;
   padding: 1em 1em 2.5em; }
+
+.switch {
+  background: #ff5349;
+  position: fixed;
+  font-size: 1.25rem;
+  right: 0; }
 
 .pageHome {
   display: flex;
@@ -814,6 +822,18 @@ code.hljs {
   @media screen and (min-width: 768px) {
     .pageContent {
       padding: 1em 6em 2em; } }
+
+.pageContent__content {
+  font-size: 1.35rem; }
+  @media (min-width: 382px) {
+    .pageContent__content {
+      font-size: 1.52rem; } }
+  @media (min-width: 768px) {
+    .pageContent__content {
+      font-size: 1.8rem; } }
+  @media (min-width: 1024px) {
+    .pageContent__content {
+      font-size: 2rem; } }
 
 .u-center {
   text-align: center; }

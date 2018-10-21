@@ -28,6 +28,10 @@
 
   &:hover {
     color: get-color(accent);
+
+    .ui-dark & {
+      color: get-color(accent, dark);
+    }
   }
 }
 

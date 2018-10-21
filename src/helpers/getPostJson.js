@@ -25,10 +25,8 @@ export function getPostJson(slug) {
   const storedJson = sessionStorage.getItem(url)
 
   if (storedJson) {
-    console.log('session')
     return fetchSession(storedJson)
   } else {
-    console.log('fetch')
     return fetchUrl(url)
   }
 }

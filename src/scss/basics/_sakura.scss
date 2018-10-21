@@ -10,13 +10,13 @@ body {
   margin: auto;
 }
 
-@media (max-width: 684px) {
+@media (max-width: $medium) {
   body {
     font-size: 1.53rem;
   }
 }
 
-@media (max-width: 382px) {
+@media (max-width: $mini) {
   body {
     font-size: 1.35rem;
   }
@@ -197,9 +197,8 @@ input[type='button'][disabled] {
   cursor: default;
   opacity: 0.5;
 }
-.button:focus,
+
 .button:hover,
-button:focus,
 button:hover,
 input[type='submit']:focus,
 input[type='submit']:hover,

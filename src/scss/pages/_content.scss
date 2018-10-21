@@ -11,3 +11,19 @@
     padding: 1em 6em 2em;
   }
 }
+
+.pageContent__content {
+  font-size: 1.35rem;
+
+  @media (min-width: $mini) {
+    font-size: 1.52rem;
+  }
+
+  @media (min-width: $medium) {
+    font-size: 1.8rem;
+  }
+
+  @media (min-width: $large) {
+    font-size: 2rem;
+  }
+}
