@@ -9,9 +9,14 @@ app.get('*', function(req, res) {
   res.sendFile(__dirname + "/dist/index.html");
 });
 
-app.listen(3000, (err) => {
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+
+app.listen(port, (err) => {
   if (err) throw err
-  console.log('> Ready on http://localhost:3000')
+  console.log('> Ready on http://localhost:8000')
 })
 
 module.exports = app;
