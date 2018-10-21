@@ -1,0 +1,13 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageContent{
+  padding: 1em 1em 0;
+
+  @media screen and (min-width: $medium){
+    padding: 1em 6em 2em;
+  }
+}

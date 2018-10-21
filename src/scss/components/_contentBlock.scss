@@ -1,0 +1,43 @@
+.contentBlock {
+  margin-bottom: 2em;
+  margin: 2em auto 4em;
+  max-width: 38em;
+
+  &--home {
+    margin: 0 auto;
+    transform: translateY(-50%);
+  }
+}
+
+.contentBlock__preTitle {
+  color: get-color(accent);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+
+  .ui-dark & {
+    color: get-color(whites);
+  }
+}
+
+.contentBlock__title {
+  font-family: $font-title;
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.contentBlock__description {
+  font-size: 1.25em;
+}
+
+.contentBlock__columnWrapper {
+  display: flex;
+}
+
+.contentBlock__ctas {
+  display: flex;
+  justify-content: center;
+}

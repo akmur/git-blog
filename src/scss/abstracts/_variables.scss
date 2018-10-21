@@ -1,0 +1,44 @@
+// Fonts
+
+$font-title: 'Merriweather', Serif;
+$font-body: 'Muli', Sans-Serif;
+
+// Sizes
+$small: 500px;
+$medium: 768px;
+$large: 1200px;
+
+// Colors
+
+$white: #e7e7e7;
+$hint-of-red: #f9f9f9;
+$iron: #d6d6d6;
+$armadillo: #4a4a4a;
+$smalt-blue: #568594;
+$black: #212121;
+
+// palette
+$paradiso: #4a7e85;
+$sapphire: #284f9c;
+$crown-of-thorns: #792218;
+$equator: #e3c45c;
+$roman: #ff5349;
+$brick-red: #cb4855;
+$light-red: #ff584e;
+
+$colors: (
+  whites: (
+    light: $white,
+    base: $hint-of-red,
+    dark: $iron
+  ),
+  accent: (
+    light: $light-red,
+    base: $roman,
+    dark: $brick-red
+  ),
+  blacks: (
+    base: $armadillo,
+    dark: $black
+  )
+);

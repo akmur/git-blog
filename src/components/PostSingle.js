@@ -15,10 +15,10 @@ export default function PostSingle(githubLink) {
     document.title = `${title} - Alessandro Muraro - Frontend Developer`
 
     const html = `
-      <div class="post">
-        <h1 class="title title--h1">${title}</h1>
-        <div class="date">${date}</div>
-        <div class="content">${content}</div>
+      <div class="pageContent pageContent--post">
+        <h1 class="pageContent__title title title--h1">${title}</h1>
+        <div class="pageContent__date date">${date}</div>
+        <div class="pageContent__content">${content}</div>
       </div>
     `
 

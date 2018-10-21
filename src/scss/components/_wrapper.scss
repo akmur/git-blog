@@ -1,0 +1,16 @@
+.wrapper {
+  background-color: get-color(whites);
+  border-top: 4px solid get-color(accent);
+  color: get-color(blacks);
+  transition: all 500ms ease;
+  padding: 0 1em;
+
+  @media screen and (min-width: $medium) {
+    padding: 0;
+  }
+
+  &.ui-dark {
+    background-color: get-color(blacks, dark);
+    color: get-color(whites, dark);
+  }
+}

@@ -1,0 +1,20 @@
+.footer {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.footer__link {
+  border-bottom: 1px solid get-color(accent);
+
+  &:hover {
+    border-bottom: 1px solid get-color(accent, dark);
+  }
+
+  .ui-dark & {
+    border-bottom: 1px dotted get-color(whites);
+
+    &:hover {
+      border-bottom: 1px dotted get-color(accent);
+    }
+  }
+}

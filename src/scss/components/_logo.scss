@@ -1,0 +1,72 @@
+.logo {
+  position: relative;
+  transition: all 0.25s ease;
+  width: 70px;
+  border: 0 !important;
+
+  @media screen and (min-width: $medium) {
+    width: 86px;
+  }
+
+  &:hover {
+    border-color: transparent;
+  }
+
+  .ui-dark & {
+    border-color: get-color(whites);
+  }
+}
+
+.logo__triangle {
+  fill: get-color(whites);
+  left: 50%;
+  position: absolute;
+  stroke: get-color(blacks);
+  top: 0;
+  transform: translateX(-50%);
+  transition: all 0.25s ease;
+
+  .ui-dark & {
+    fill: get-color(blacks, dark);
+    stroke: get-color(whites);
+  }
+
+  .logo:hover & {
+    stroke: get-color(accent);
+  }
+}
+
+.logo__triangle--center {
+  width: 6rem;
+  z-index: 10;
+
+  @media screen and (min-width: $medium) {
+    width: 7rem;
+  }
+}
+
+.logo__triangle--left,
+.logo__triangle--right {
+  width: 4rem;
+  top: 1rem;
+
+  @media screen and (min-width: $medium) {
+    width: 5rem;
+  }
+}
+
+.logo__triangle--left {
+  transform: translateX(-85%);
+
+  .logo:hover & {
+    transform: translateX(-50%);
+  }
+}
+
+.logo__triangle--right {
+  transform: translateX(-15%);
+
+  .logo:hover & {
+    transform: translateX(-50%);
+  }
+}

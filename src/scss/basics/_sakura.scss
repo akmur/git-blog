@@ -1,22 +1,13 @@
-/* Sakura.css v1.0.0
- * ================
- * Minimal css theme.
- * Project: https://github.com/oxalorg/sakura
- */
-/* Body */
 html {
+  font-family: $font-body;
   font-size: 62.5%;
-  font-family: serif;
 }
 
 body {
   font-size: 1.8rem;
+  font-weight: 300;
   line-height: 1.618;
-  max-width: 38em;
   margin: auto;
-  color: #4a4a4a;
-  background-color: #f9f9f9;
-  padding: 13px;
 }
 
 @media (max-width: 684px) {
@@ -37,25 +28,26 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.1;
-  font-family: Verdana, Geneva, sans-serif;
-  font-weight: 700;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-word;
-  -ms-hyphens: auto;
   -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -ms-word-break: break-all;
   -webkit-hyphens: auto;
+  font-family: $font-title;
+  font-weight: 700;
   hyphens: auto;
+  line-height: 1.1;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  margin-bottom: 0.25em;
 }
 
 h1 {
-  font-size: 2.35em;
+  font-size: 3em;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.25em;
 }
 
 h3 {
@@ -63,11 +55,11 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 h5 {
-  font-size: 1.25em;
+  font-size: 1.125em;
 }
 
 h6 {
@@ -80,17 +72,25 @@ sup {
   font-size: 75%;
 }
 
-hr {
-  border-color: #2c8898;
+a {
+  border-bottom: 2px dotted get-color(accent);
+  color: get-color(accent);
+  text-decoration: none;
+
+  .ui-dark & {
+    border-bottom: 2px dotted get-color(whites, light);
+    color: get-color(whites, light);
+  }
 }
 
-a {
-  text-decoration: none;
-  color: #2c8898;
-}
 a:hover {
-  color: #982c61;
-  border-bottom: 2px solid #4a4a4a;
+  border-color: get-color(accent, dark);
+  color: get-color(accent, dark);
+
+  .ui-dark & {
+    border-bottom: 2px dotted get-color(accent);
+    color: get-color(accent);
+  }
 }
 
 ul {
@@ -102,10 +102,14 @@ li {
 }
 
 blockquote {
+  border-left: 3px solid get-color(accent);
   font-style: italic;
   margin-left: 1.5em;
   padding-left: 1em;
-  border-left: 3px solid #2c8898;
+
+  .ui-dark & {
+    border-left: 3px solid get-color(accent, light);
+  }
 }
 
 img {
@@ -114,46 +118,47 @@ img {
 
 /* Pre and Code */
 pre {
-  background-color: #f1f1f1;
+  background-color: get-color(whites);
   display: block;
-  padding: 1em;
   overflow-x: auto;
+  padding: 1em;
 }
 
 code {
+  background-color: get-color(whites);
   font-size: 0.9em;
   padding: 0 0.5em;
-  background-color: #f1f1f1;
   white-space: pre-wrap;
 }
 
 pre > code {
-  padding: 0;
   background-color: transparent;
+  padding: 0;
   white-space: pre;
 }
 
 /* Tables */
 table {
+  border-collapse: collapse;
   text-align: justify;
   width: 100%;
-  border-collapse: collapse;
 }
 
 td,
 th {
+  border-bottom: 1px solid get-color(whites);
   padding: 0.5em;
-  border-bottom: 1px solid #f1f1f1;
 }
 
 /* Buttons, forms and input */
 input,
 textarea {
-  border: 1px solid #4a4a4a;
+  border: 1px solid get-color;
 }
+
 input:focus,
 textarea:focus {
-  border: 1px solid #2c8898;
+  border: 1px solid get-color(accent);
 }
 
 textarea {
@@ -165,18 +170,25 @@ button,
 input[type='submit'],
 input[type='reset'],
 input[type='button'] {
+  background-color: get-color(accent);
+  border-radius: 1px;
+  border: 1px solid get-color(accent);
+  box-sizing: border-box;
+  color: get-color(whites);
+  cursor: pointer;
   display: inline-block;
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  background-color: #2c8898;
-  color: #f9f9f9;
-  border-radius: 1px;
-  border: 1px solid #2c8898;
-  cursor: pointer;
-  box-sizing: border-box;
+
+  .ui-dark & {
+    color: get-color(whites);
+    background-color: get-color(accent, dark);
+    border: 1px solid get-color(accent, dark);
+  }
 }
+
 .button[disabled],
 button[disabled],
 input[type='submit'][disabled],
@@ -195,10 +207,16 @@ input[type='reset']:focus,
 input[type='reset']:hover,
 input[type='button']:focus,
 input[type='button']:hover {
-  background-color: #982c61;
-  border-color: #982c61;
-  color: #f9f9f9;
+  background-color: get-color(accent, dark);
+  border-color: get-color(accent, dark);
+  color: get-color(whites);
   outline: 0;
+
+  .ui-dark & {
+    color: get-color(whites);
+    background-color: get-color(accent);
+    border: 1px solid get-color(accent);
+  }
 }
 
 textarea,
@@ -208,8 +226,8 @@ input[type] {
   padding: 6px 10px;
   /* The 6px vertically centers text on FF, ignored by Webkit */
   margin-bottom: 10px;
-  background-color: #f1f1f1;
-  border: 1px solid #f1f1f1;
+  background-color: get-color(whites);
+  border: 1px solid get-color(whites);
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
@@ -217,12 +235,12 @@ input[type] {
 textarea:focus,
 select:focus,
 input[type]:focus {
-  border: 1px solid #2c8898;
+  border: 1px solid get-color(accent);
   outline: 0;
 }
 
 input[type='checkbox']:focus {
-  outline: 1px dotted #2c8898;
+  outline: 1px dotted get-color(accent);
 }
 
 label,
@@ -232,3 +250,4 @@ fieldset {
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
+

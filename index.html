@@ -5,12 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <meta charset="UTF-8" />
+  <title>Alessandro Muraro - Frontend Developer 👋</title>
 </head>
 
 <body>
-  <div id="nav"></div>
-  <div id="content"></div>
+  <div class="wrapper ui-light">
+    <div class="layout">
+      <div id="nav"></div>
+      <div id="content" class="content"></div>
+      <div class="footer">
+        <div class="footer__container">
+          <p class="footer__text">
+            You can find me on
+            <a class="footer__link" href="https://twitter.com/akmur">
+              Twitter
+            </a>
+            ,
+            <a
+              class="footer__link"
+              href="https://www.linkedin.com/in/alessandromuraro/"
+            >
+              Linkedin
+            </a>
+            or
+            <a class="footer__link" href="https://github.com/akmur">
+              Github
+            </a>
+            .
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="./index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    const allCode = document.querySelectorAll('code');
+    for (let index = 0; index < allCode.length; index++) {
+      const element = allCode[index];
+      hljs.highlightBlock(element);
+    }
+  </script>
 </body>
 
 </html>

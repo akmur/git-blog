@@ -1,0 +1,12 @@
+.emoji {
+  display: inline-block;
+  margin: 0 0.25em;
+  cursor: default;
+  animation: wave 250ms ease-in-out 5 alternate;
+}
+
+@keyframes wave {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(15deg)}
+  100% {transform: rotate(0deg)}
+}

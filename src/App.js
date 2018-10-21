@@ -7,9 +7,8 @@ import Home from './components/Home'
 import render from './helpers/render'
 import Navigo from 'navigo'
 const root = null
-var useHash = true; // Defaults to: false
-var hash = '#!'; // Defaults to: '#'
-var router = new Navigo(root, useHash, hash);
+var useHash = false; // Defaults to: false
+var router = new Navigo(root);
 
 export default function App() {
   document.querySelector('#nav').innerHTML = Header()
