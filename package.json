@@ -4,7 +4,8 @@
   "description": "Git Powered Preact Blog",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html --open",
+    "start": "node server.js",
+    "dev": "parcel index.html --open",
     "build": "parcel build index.html"
   },
   "dependencies": {
