@@ -1,3 +1,4 @@
+import Header from './Header'
 import { getPostsListJson } from '../helpers/getPostsListJson'
 import { onlyDate } from '../helpers/utils'
 import dayjs from 'dayjs'
@@ -5,9 +6,10 @@ import render from '../helpers/render'
 import relativeTime from 'dayjs/plugin/relativeTime'
 dayjs.extend(relativeTime)
 
-
 export default function PostsList() {
   document.title = `Posts - Alessandro Muraro - Frontend Developer`
+  document.querySelector('#nav').innerHTML = Header()
+
   getPostsListJson().then(response => {
     const posts = response
       .map((item, index) => {

@@ -1,8 +1,12 @@
+import Header from './Header'
 import render from '../helpers/render'
 
 export default function About() {
   document.title = 'About - Alessandro Muraro - Frontend Developer'
-  render('#content', `
+  document.querySelector('#nav').innerHTML = Header()
+  render(
+    '#content',
+    `
     <div class="pageContent">
       <div class="contentBlock">
         <h2 class="contentBlock__title">Who I am</h2>
@@ -193,5 +197,6 @@ export default function About() {
         </div>
       </div>
     </div>
-  `)
+  `
+  )
 }

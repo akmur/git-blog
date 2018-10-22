@@ -1,8 +1,12 @@
 import render from '../helpers/render'
+import Header from './Header'
 
 export default function Contacts() {
   document.title = 'Contacts - Alessandro Muraro - Frontend Developer'
-  render('#content', `
+  document.querySelector('#nav').innerHTML = Header()
+  render(
+    '#content',
+    `
     <div class="pageContent">
       <div class="contentBlock">
         <h2 class="contentBlock__title">Get in touch</h2>
@@ -11,5 +15,6 @@ export default function Contacts() {
         </div>
       </div>
     </div>
-  `)
+  `
+  )
 }

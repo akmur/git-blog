@@ -1,7 +1,9 @@
 import render from '../helpers/render'
+import Header from './Header'
 
 export default function Home() {
   document.title = 'Alessandro Muraro - Frontend Developer'
+  document.querySelector('#nav').innerHTML = Header()
   const html = `
   <div class="pageHome">
     <div class="contentBlock contentBlock--home">

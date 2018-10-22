@@ -1,3 +1,4 @@
+import Header from './Header'
 import render from '../helpers/render'
 import { onlyTitle, onlyDate, removeExtension } from '../helpers/utils'
 import { getPostJson } from '../helpers/getPostJson'
@@ -13,6 +14,7 @@ export default function PostSingle(githubLink) {
     const date = dayjs().to(dayjs(onlyDate(githubLink)))
     const content = markdown.toHTML(item)
     document.title = `${title} - Alessandro Muraro - Frontend Developer`
+    document.querySelector('#nav').innerHTML = Header()
 
     const html = `
       <div class="pageContent pageContent--post">
