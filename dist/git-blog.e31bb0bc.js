@@ -128,7 +128,7 @@ var _render = _interopRequireDefault(require("../helpers/render"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Header() {
-  return "\n    <div class=\"header\">\n      <a href=\"/\" class=\"logo\">\n        <svg class=\"logo__triangle logo__triangle--left\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"217 167 106 96\" style=\"isolation:isolate\">\n            <path stroke-linecap=\"square\" stroke-linejoin=\"miter\" stroke-miterlimit=\"3\" stroke-width=\"2\" d=\"M220 260l50-90 50 90H220z\" vector-effect=\"non-scaling-stroke\"/>\n        </svg>\n        <svg class=\"logo__triangle logo__triangle--center\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"217 167 106 96\" style=\"isolation:isolate\">\n            <path stroke-linecap=\"square\" stroke-linejoin=\"miter\" stroke-miterlimit=\"3\" stroke-width=\"2\" d=\"M220 260l50-90 50 90H220z\" vector-effect=\"non-scaling-stroke\"/>\n        </svg>\n        <svg class=\"logo__triangle logo__triangle--right\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"217 167 106 96\" style=\"isolation:isolate\">\n            <path stroke-linecap=\"square\" stroke-linejoin=\"miter\" stroke-miterlimit=\"3\" stroke-width=\"2\" d=\"M220 260l50-90 50 90H220z\" vector-effect=\"non-scaling-stroke\"/>\n        </svg>\n      </a>\n      <div id=\"nav\">\n        <nav class=\"nav\">\n          <ul class=\"nav__list\">\n            <li class=\"nav__item\">\n              <a href=\"/\" class=\"nav__link\">Home</a>\n            </li>\n            <li class=\"nav__item\">\n              <a href=\"/about\" class=\"nav__link\">About</a>\n            </li>\n            <li class=\"nav__item\">\n              <a href=\"/posts\" class=\"nav__link\">Posts</a>\n            </li>\n          </ul>\n        </nav>\n      </div>\n    </div>\n  ";
+  return "\n    \n  ";
 }
 },{"../helpers/render":"src/helpers/render.js"}],"src/components/About.js":[function(require,module,exports) {
 "use strict";
@@ -159,16 +159,13 @@ exports.default = Contacts;
 
 var _render = _interopRequireDefault(require("../helpers/render"));
 
-var _Header = _interopRequireDefault(require("./Header"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Contacts() {
   document.title = 'Contacts - Alessandro Muraro - Frontend Developer';
-  document.querySelector('#nav').innerHTML = (0, _Header.default)();
   (0, _render.default)('#content', "\n    <div class=\"pageContent\">\n      <div class=\"contentBlock\">\n        <h2 class=\"contentBlock__title\">Get in touch</h2>\n        <div class=\"contentBlock__description\">\n            You can follow and message me on <a class=\"link\" href=\"https://twitter.com/akmur\">Twitter</a>, <a class=\"link\" href=\"https://webdev.network/@akmur\">Mastodon</a>, <a class=\"link\" href=\"https://www.linkedin.com/in/alessandromuraro/\">Linkedin</a> or <a class=\"link\" href=\"https://github.com/akmur\">Github</a>.\n        </div>\n      </div>\n    </div>\n  ");
 }
-},{"../helpers/render":"src/helpers/render.js","./Header":"src/components/Header.js"}],"src/helpers/utils.js":[function(require,module,exports) {
+},{"../helpers/render":"src/helpers/render.js"}],"src/helpers/utils.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -286,8 +283,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = PostsList;
 
-var _Header = _interopRequireDefault(require("./Header"));
-
 var _getPostsListJson = require("../helpers/getPostsListJson");
 
 var _utils = require("../helpers/utils");
@@ -304,7 +299,6 @@ _dayjs.default.extend(_relativeTime.default);
 
 function PostsList() {
   document.title = "Posts - Alessandro Muraro - Frontend Developer";
-  document.querySelector('#nav').innerHTML = (0, _Header.default)();
   (0, _getPostsListJson.getPostsListJson)().then(function (response) {
     var posts = response.map(function (item, index) {
       var itemLink = "/posts/".concat(item.githubLink);
@@ -316,7 +310,7 @@ function PostsList() {
     (0, _render.default)('#content', html);
   });
 }
-},{"./Header":"src/components/Header.js","../helpers/getPostsListJson":"src/helpers/getPostsListJson.js","../helpers/utils":"src/helpers/utils.js","dayjs":"node_modules/dayjs/dayjs.min.js","../helpers/render":"src/helpers/render.js","dayjs/plugin/relativeTime":"node_modules/dayjs/plugin/relativeTime.js"}],"src/helpers/getPostJson.js":[function(require,module,exports) {
+},{"../helpers/getPostsListJson":"src/helpers/getPostsListJson.js","../helpers/utils":"src/helpers/utils.js","dayjs":"node_modules/dayjs/dayjs.min.js","../helpers/render":"src/helpers/render.js","dayjs/plugin/relativeTime":"node_modules/dayjs/plugin/relativeTime.js"}],"src/helpers/getPostJson.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2927,8 +2921,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = PostSingle;
 
-var _Header = _interopRequireDefault(require("./Header"));
-
 var _render = _interopRequireDefault(require("../helpers/render"));
 
 var _utils = require("../helpers/utils");
@@ -2954,12 +2946,11 @@ function PostSingle(githubLink) {
     var content = _markdown.markdown.toHTML(item);
 
     document.title = "".concat(title, " - Alessandro Muraro - Frontend Developer");
-    document.querySelector('#nav').innerHTML = (0, _Header.default)();
     var html = "\n      <div class=\"pageContent pageContent--post\">\n        <h1 class=\"pageContent__title title title--h1\">".concat(title, "</h1>\n        <div class=\"pageContent__date date\">").concat(date, "</div>\n        <div class=\"pageContent__content\">").concat(content, "</div>\n      </div>\n    ");
     (0, _render.default)('#content', html);
   });
 }
-},{"./Header":"src/components/Header.js","../helpers/render":"src/helpers/render.js","../helpers/utils":"src/helpers/utils.js","../helpers/getPostJson":"src/helpers/getPostJson.js","markdown":"node_modules/markdown/lib/index.js","dayjs":"node_modules/dayjs/dayjs.min.js","dayjs/plugin/relativeTime":"node_modules/dayjs/plugin/relativeTime.js"}],"src/components/Home.js":[function(require,module,exports) {
+},{"../helpers/render":"src/helpers/render.js","../helpers/utils":"src/helpers/utils.js","../helpers/getPostJson":"src/helpers/getPostJson.js","markdown":"node_modules/markdown/lib/index.js","dayjs":"node_modules/dayjs/dayjs.min.js","dayjs/plugin/relativeTime":"node_modules/dayjs/plugin/relativeTime.js"}],"src/components/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2969,17 +2960,14 @@ exports.default = Home;
 
 var _render = _interopRequireDefault(require("../helpers/render"));
 
-var _Header = _interopRequireDefault(require("./Header"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Home() {
   document.title = 'Alessandro Muraro - Frontend Developer';
-  document.querySelector('#nav').innerHTML = (0, _Header.default)();
   var html = "\n  <div class=\"pageHome\">\n    <div class=\"contentBlock contentBlock--home\">\n      <div class=\"contentBlock__preTitle u-center\">\n        Hi there, I'm Alessandro Muraro.\n      </div>\n      <h1 class=\"contentBlock__title u-center\">\n        I'm a frontend developer, I make websites.\n        <span class=\"emoji\" role=\"img\" aria-label=\"waving hand\">\n          \uD83D\uDC4B\n        </span>\n      </h1>\n    </div>\n  </div>\n  ";
   (0, _render.default)('#content', html);
 }
-},{"../helpers/render":"src/helpers/render.js","./Header":"src/components/Header.js"}],"src/components/Switch.js":[function(require,module,exports) {
+},{"../helpers/render":"src/helpers/render.js"}],"src/components/Switch.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3174,7 +3162,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52712" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53451" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

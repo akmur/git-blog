@@ -1,9 +1,8 @@
 import render from '../helpers/render'
-import Header from './Header'
 
 export default function Contacts() {
   document.title = 'Contacts - Alessandro Muraro - Frontend Developer'
-  document.querySelector('#nav').innerHTML = Header()
+
   render(
     '#content',
     `
