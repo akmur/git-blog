@@ -1,4 +1,4 @@
-export default function Switch(){
+export default function Switch() {
   const switchTrigger = document.querySelector('#switch')
   const body = document.querySelector('body')
 
@@ -13,7 +13,7 @@ export default function Switch(){
 
   switchTrigger.addEventListener('click', () => {
     const newTheme =
-      event.target.getAttribute('data-theme') === 'ui-light'
+      switchTrigger.getAttribute('data-theme') === 'ui-light'
         ? 'ui-dark'
         : 'ui-light'
     switchTrigger.setAttribute('data-theme', newTheme)
