@@ -1,4 +1,3 @@
-import Header from './components/Header'
 import About from './components/About'
 import Contacts from './components/Contacts'
 import PostsList from './components/PostsList'
