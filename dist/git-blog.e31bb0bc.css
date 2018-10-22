@@ -598,11 +598,12 @@ fieldset {
   max-width: 38em; }
   .contentBlock--home {
     margin: 0 auto;
-    transform: translateY(-50%); }
+    transform: translateY(-25%);
+    max-width: 40em; }
 
 .contentBlock__preTitle {
   color: #ff5349;
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 700;
   margin-bottom: 0.5em;
   text-transform: uppercase; }
@@ -806,7 +807,12 @@ code.hljs {
   background: #ff5349;
   position: fixed;
   font-size: 1.25rem;
+  bottom: 0;
   right: 0; }
+  @media screen and (min-width: 768px) {
+    .switch {
+      bottom: auto;
+      top: 0; } }
 
 .pageHome {
   display: flex;

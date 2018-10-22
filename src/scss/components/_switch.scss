@@ -2,5 +2,11 @@
   background: get-color(accent);
   position: fixed;
   font-size: 1.25rem;
+  bottom: 0;
   right: 0;
+
+  @media screen and (min-width: $medium) {
+    bottom: auto;
+    top: 0;
+  }
 }
