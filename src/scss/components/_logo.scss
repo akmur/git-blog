@@ -1,11 +1,15 @@
 .logo {
+  border: 0 !important;
   position: relative;
   transition: all 0.25s ease;
-  width: 70px;
-  border: 0 !important;
+  width: 6rem;
+
+  @media screen and (min-width: $small) {
+    width: 7rem;
+  }
 
   @media screen and (min-width: $medium) {
-    width: 86px;
+    width: 8.5rem;
   }
 
   &:hover {
@@ -37,8 +41,12 @@
 }
 
 .logo__triangle--center {
-  width: 6rem;
+  width: 4rem;
   z-index: 10;
+
+  @media screen and (min-width: $small) {
+    width: 6rem;
+  }
 
   @media screen and (min-width: $medium) {
     width: 7rem;
@@ -47,8 +55,12 @@
 
 .logo__triangle--left,
 .logo__triangle--right {
-  width: 4rem;
-  top: 1rem;
+  top: 0.5rem;
+  width: 3rem;
+
+  @media screen and (min-width: $small) {
+    width: 4rem;
+  }
 
   @media screen and (min-width: $medium) {
     width: 5rem;

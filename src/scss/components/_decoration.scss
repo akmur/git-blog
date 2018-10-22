@@ -1,8 +1,8 @@
 .decoration {
-    height: 4px;
-    background: get-color(accent);
-
-    .ui-dark & {
-        background: get-color(accent, dark);
-    }
+  height: 4px;
+  background: get-color(accent);
+  
+  .ui-dark & {
+    background: get-color(accent, dark);
+  }
 }

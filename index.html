@@ -16,7 +16,6 @@
 </head>
 
 <body class="ui-light">
-  <button class="switch" id="switch" data-current="">Switch Theme</button>
   <div class="decoration"></div>
   <div class="wrapper">
     <div class="layout">
@@ -25,7 +24,11 @@
       <div class="footer">
         <div class="footer__container">
           <p class="footer__text">
-            You can find me on
+            Find me on: <br />
+            <a class="footer__link" href="https://webdev.network/@akmur">
+              Mastodon
+            </a>
+            ,
             <a class="footer__link" href="https://twitter.com/akmur">
               Twitter
             </a>
@@ -36,25 +39,25 @@
             >
               Linkedin
             </a>
-            or
+            ,
             <a class="footer__link" href="https://github.com/akmur">
               Github
             </a>
             .
           </p>
+          <button class="switch" id="switch" data-current="">Switch Theme</button>
         </div>
       </div>
     </div>
   </div>
-  <script src="./index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>
-    const allCode = document.querySelectorAll('code');
-    for (let index = 0; index < allCode.length; index++) {
-      const element = allCode[index];
-      hljs.highlightBlock(element);
-    }
-  </script>
 </body>
-
+<script src="./index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+  const allCode = document.querySelectorAll('code');
+  for (let index = 0; index < allCode.length; index++) {
+    const element = allCode[index];
+    hljs.highlightBlock(element);
+  }
+</script>
 </html>

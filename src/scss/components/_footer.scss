@@ -3,6 +3,14 @@
   text-align: center;
 }
 
+.footer__text {
+  padding: 0 2em;
+
+  @media screen and (min-width: $medium) {
+    padding: 0;
+  }
+}
+
 .footer__link {
   border-bottom: 1px solid get-color(accent);
 
