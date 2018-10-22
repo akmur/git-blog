@@ -11,7 +11,7 @@ export default function Home() {
         Hi there, I'm Alessandro Muraro.
       </div>
       <h1 class="contentBlock__title u-center">
-        I'm a frontend developer, I make websites.
+        I'm a frontend developer,<br />I make websites.
         <span class="emoji" role="img" aria-label="waving hand">
           👋
         </span>

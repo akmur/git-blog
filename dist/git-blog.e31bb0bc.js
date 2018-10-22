@@ -2976,7 +2976,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Home() {
   document.title = 'Alessandro Muraro - Frontend Developer';
   document.querySelector('#nav').innerHTML = (0, _Header.default)();
-  var html = "\n  <div class=\"pageHome\">\n    <div class=\"contentBlock contentBlock--home\">\n      <div class=\"contentBlock__preTitle u-center\">\n        Hi there, I'm Alessandro Muraro.\n      </div>\n      <h1 class=\"contentBlock__title u-center\">\n        I'm a frontend developer, I make websites.\n        <span class=\"emoji\" role=\"img\" aria-label=\"waving hand\">\n          \uD83D\uDC4B\n        </span>\n      </h1>\n    </div>\n  </div>\n  ";
+  var html = "\n  <div class=\"pageHome\">\n    <div class=\"contentBlock contentBlock--home\">\n      <div class=\"contentBlock__preTitle u-center\">\n        Hi there, I'm Alessandro Muraro.\n      </div>\n      <h1 class=\"contentBlock__title u-center\">\n        I'm a frontend developer,<br />I make websites.\n        <span class=\"emoji\" role=\"img\" aria-label=\"waving hand\">\n          \uD83D\uDC4B\n        </span>\n      </h1>\n    </div>\n  </div>\n  ";
   (0, _render.default)('#content', html);
 }
 },{"../helpers/render":"src/helpers/render.js","./Header":"src/components/Header.js"}],"src/components/Switch.js":[function(require,module,exports) {
@@ -3172,7 +3172,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51188" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52119" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
