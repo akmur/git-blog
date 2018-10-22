@@ -1,9 +1,8 @@
-import Header from './Header'
 import render from '../helpers/render'
 
 export default function About() {
   document.title = 'About - Alessandro Muraro - Frontend Developer'
-  document.querySelector('#nav').innerHTML = Header()
+
   render(
     '#content',
     `
