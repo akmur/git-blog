@@ -1,3 +1,4 @@
+import Header from './Header'
 import render from '../helpers/render'
 
 export default function About() {
