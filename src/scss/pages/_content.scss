@@ -5,7 +5,7 @@
 }
 
 .pageContent{
-  padding: 0;
+  padding: 1em 0 0;
 
   @media screen and (min-width: $medium){
     padding: 1em 6em 2em;
@@ -13,11 +13,7 @@
 }
 
 .pageContent__content {
-  font-size: 1.35rem;
-
-  @media (min-width: $mini) {
-    font-size: 1.52rem;
-  }
+  font-size: 1.52rem;
 
   @media (min-width: $medium) {
     font-size: 1.8rem;

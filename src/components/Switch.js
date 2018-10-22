@@ -12,6 +12,7 @@ export default function Switch() {
   }
 
   switchTrigger.addEventListener('click', () => {
+    event.target.blur()
     const newTheme =
       switchTrigger.getAttribute('data-theme') === 'ui-light'
         ? 'ui-dark'

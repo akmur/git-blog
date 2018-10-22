@@ -5,9 +5,4 @@
     margin: 0 auto;
     max-width: 48em;
     min-height: 100vh;
-    padding-top: 1rem;
-
-    @media screen and (min-width: $medium) {
-      padding-top: 0rem;
-    }
 }

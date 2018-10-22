@@ -67,10 +67,7 @@ export default function About() {
             href="https://en.wikipedia.org/wiki/Software_entropy"
             rel="noopener noreferrer"
             target="_blank"
-          >
-            software entropy
-          </a>
-          .
+          >software entropy</a>.
         </div>
       </div>
       <div class="contentBlock">
@@ -78,48 +75,33 @@ export default function About() {
         <div class="contentBlock__description">
           <ul class="cvlist">
             <li class="cvlist__item">
-              <a class="link" href="http://navabi.de/" target="blank">
-                navabi GmbH
-              </a> 
-              (DE), Frontend developer, Since April 2017
+              <a class="link" href="http://navabi.de/" target="blank">navabi GmbH</a> 
+              🇩🇪, Frontend developer, Since April 2017
             </li>
             <li class="cvlist__item">
               <a
                 class="link"
                 href="http://www.objectway.it/IT/default.asp"
                 target="blank"
-              >
-                Objectway
-              </a> 
-              (IT), Frontend developer, 2015 to 2017
+              >Objectway</a> 🇮🇹 Frontend developer, 2015 to 2017
             </li>
             <li class="cvlist__item">
               <a
                 class="link"
                 href="http://www.thelevelgroup.com/"
                 target="blank"
-              >
-                The Level Group
-              </a> 
-              (IT), Frontend developer, 2014 to 2015
+              >The Level Group</a> 🇮🇹 Frontend developer, 2014 to 2015
             </li>
             <li class="cvlist__item">
-              <a class="link" href="http://www.pazienti.it/" target="blank">
-                Pazienti
-              </a> 
-              (IT), Frontend developer / UX / UI, 2011 to 2014
+              <a class="link" href="http://www.pazienti.it/" target="blank">Pazienti</a> 
+              🇮🇹 Frontend developer / UX / UI, 2011 to 2014
             </li>
             <li class="cvlist__item">
               <a class="link" href="http://www.apple.com/" target="blank">
-                Apple
-              </a> 
-              (IRL), Tech support, 2003 to 2007
+                Apple</a> 🇮🇪 Tech support, 2003 to 2007
             </li>
             <li class="cvlist__item">
-              <a class="link" href="http://www.unisys.com/" target="blank">
-                Unisys
-              </a> 
-              (NL), Tech support, 2001 to 2003
+              <a class="link" href="http://www.unisys.com/" target="blank">Unisys</a> 🇳🇱 Tech support, 2001 to 2003
             </li>
           </ul>
         </div>

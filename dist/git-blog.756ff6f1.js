@@ -128,7 +128,7 @@ var _render2 = _interopRequireDefault(_render);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Header() {
-  return '\n    <div class="header">\n      <a href="/" class="logo">\n        <svg class="logo__triangle logo__triangle--left" xmlns="http://www.w3.org/2000/svg" viewBox="217 167 106 96" style="isolation:isolate">\n            <path stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="3" stroke-width="2" d="M220 260l50-90 50 90H220z" vector-effect="non-scaling-stroke"/>\n        </svg>\n        <svg class="logo__triangle logo__triangle--center" xmlns="http://www.w3.org/2000/svg" viewBox="217 167 106 96" style="isolation:isolate">\n            <path stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="3" stroke-width="2" d="M220 260l50-90 50 90H220z" vector-effect="non-scaling-stroke"/>\n        </svg>\n        <svg class="logo__triangle logo__triangle--right" xmlns="http://www.w3.org/2000/svg" viewBox="217 167 106 96" style="isolation:isolate">\n            <path stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="3" stroke-width="2" d="M220 260l50-90 50 90H220z" vector-effect="non-scaling-stroke"/>\n        </svg>\n      </a>\n      <div id="nav">\n        <nav class="nav">\n          <ul class="nav__list">\n            <li class="nav__item">\n              <a href="/" class="nav__link">Home</a>\n            </li>\n            <li class="nav__item">\n              <a href="/about" class="nav__link">About</a>\n            </li>\n            <li class="nav__item">\n              <a href="/posts" class="nav__link">Posts</a>\n            </li>\n          </ul>\n        </nav>\n      </div>\n    </div>\n  ';
+  return '\n  <div class="header">\n  <a href="/" class="logo">\n    <svg class="logo__triangle logo__triangle--left" xmlns="http://www.w3.org/2000/svg" viewBox="217 167 106 96" style="isolation:isolate">\n        <path stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="3" stroke-width="2" d="M220 260l50-90 50 90H220z" vector-effect="non-scaling-stroke"/>\n    </svg>\n    <svg class="logo__triangle logo__triangle--center" xmlns="http://www.w3.org/2000/svg" viewBox="217 167 106 96" style="isolation:isolate">\n        <path stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="3" stroke-width="2" d="M220 260l50-90 50 90H220z" vector-effect="non-scaling-stroke"/>\n    </svg>\n    <svg class="logo__triangle logo__triangle--right" xmlns="http://www.w3.org/2000/svg" viewBox="217 167 106 96" style="isolation:isolate">\n        <path stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="3" stroke-width="2" d="M220 260l50-90 50 90H220z" vector-effect="non-scaling-stroke"/>\n    </svg>\n  </a>\n  <div id="nav">\n    <nav class="nav">\n      <ul class="nav__list">\n        <li class="nav__item">\n          <a href="/" class="nav__link">Home</a>\n        </li>\n        <li class="nav__item">\n          <a href="/about" class="nav__link">About</a>\n        </li>\n        <li class="nav__item">\n          <a href="/posts" class="nav__link">Posts</a>\n        </li>\n      </ul>\n    </nav>\n  </div>\n</div>\n  ';
 }
 },{"../helpers/render":"src/helpers/render.js"}],"src/components/About.js":[function(require,module,exports) {
 'use strict';
@@ -138,6 +138,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = About;
 
+var _Header = require('./Header');
+
+var _Header2 = _interopRequireDefault(_Header);
+
 var _render = require('../helpers/render');
 
 var _render2 = _interopRequireDefault(_render);
@@ -146,9 +150,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function About() {
   document.title = 'About - Alessandro Muraro - Frontend Developer';
-  (0, _render2.default)('#content', '\n    <div class="pageContent">\n      <div class="contentBlock">\n        <h2 class="contentBlock__title">Who I am</h2>\n        <div class="contentBlock__description">\n          I am a frontend developer born in \n          <a\n            target="blank"\n            rel="noopener noreferrer"\n            href="https://www.google.de/maps/place/Milan,+Metropolitan+City+of+Milan,+Italy/data=!4m2!3m1!1s0x4786c1493f1275e7:0x3cffcd13c6740e8d?sa=X&ved=2ahUKEwjn94f73Y_eAhWihqYKHc2yAnAQ8gEwAHoECAAQAQ"\n          >\n            Milano, Italy\n          </a>\n          , and currently based in \n          <a\n            href="https://www.google.de/maps/place/Aachen/@50.7595961,5.9564421,11z/data=!3m1!4b1!4m5!3m4!1s0x47c0997cb08a191d:0x63a30eae0b0e444f!8m2!3d50.7753455!4d6.0838868"\n            target="blank"\n            rel="noopener noreferrer"\n          >\n            Aachen, Germany\n          </a>\n          <br />I started hacking away at the web back in 1999, but it was just\n          my hobby for many years. In 2011, I started my professional career in\n          frontend development. <br />\n          Over the last 15 (!) years or so, I have been living around Europe:\n          Italy \n          <span role="img" aria-label="italian flag">\n            \uD83C\uDDEE\uD83C\uDDF9\n          </span>\n          , the Netherlands \n          <span role="img" aria-label="dutch flag">\n            \uD83C\uDDF3\uD83C\uDDF1\n          </span>\n          , Ireland \n          <span role="img" aria-label="irish flag">\n            \uD83C\uDDEE\uD83C\uDDEA\n          </span>\n          , and now Germany \n          <span role="img" aria-label="german flag">\n            \uD83C\uDDE9\uD83C\uDDEA\n          </span>, where I live with my wife Antonella, my kid Matteo, and my dogs Mela and Tobi.\n        </div>\n      </div>\n      <div class="contentBlock">\n        <div class="avatar">\n          <img src="https://filedn.com/lmWxu5DGgw0FbsUS7mWpc3S/site-image.jpg" />\n        </div>\n      </div>\n      <div class="contentBlock">\n        <h2 class="contentBlock__title">What I do</h2>\n        <div class="contentBlock__description">\n          I am experienced in dealing with complex and/or legacy codebases,\n          which I love to refactor and get back into shape. I\'m always learning\n          new technologies which I apply responsibly, careful not to create\n          technical debt. I specialize in coding modular, component-based\n          websites. I am passionate about clean, maintainable, readable code and\n          I fight the good fight against \n          <a\n            href="https://en.wikipedia.org/wiki/Software_entropy"\n            rel="noopener noreferrer"\n            target="_blank"\n          >\n            software entropy\n          </a>\n          .\n        </div>\n      </div>\n      <div class="contentBlock">\n        <h2 class="contentBlock__title">What I\'ve done</h2>\n        <div class="contentBlock__description">\n          <ul class="cvlist">\n            <li class="cvlist__item">\n              <a class="link" href="http://navabi.de/" target="blank">\n                navabi GmbH\n              </a> \n              (DE), Frontend developer, Since April 2017\n            </li>\n            <li class="cvlist__item">\n              <a\n                class="link"\n                href="http://www.objectway.it/IT/default.asp"\n                target="blank"\n              >\n                Objectway\n              </a> \n              (IT), Frontend developer, 2015 to 2017\n            </li>\n            <li class="cvlist__item">\n              <a\n                class="link"\n                href="http://www.thelevelgroup.com/"\n                target="blank"\n              >\n                The Level Group\n              </a> \n              (IT), Frontend developer, 2014 to 2015\n            </li>\n            <li class="cvlist__item">\n              <a class="link" href="http://www.pazienti.it/" target="blank">\n                Pazienti\n              </a> \n              (IT), Frontend developer / UX / UI, 2011 to 2014\n            </li>\n            <li class="cvlist__item">\n              <a class="link" href="http://www.apple.com/" target="blank">\n                Apple\n              </a> \n              (IRL), Tech support, 2003 to 2007\n            </li>\n            <li class="cvlist__item">\n              <a class="link" href="http://www.unisys.com/" target="blank">\n                Unisys\n              </a> \n              (NL), Tech support, 2001 to 2003\n            </li>\n          </ul>\n        </div>\n      </div>\n      <div class="contentBlock">\n        <h3 class="contentBlock__title">What I know</h3>\n        <div class="contentBlock__description">\n          <div class="contentBlock__columnWrapper">\n            <div class="contentBlock__column">\n              <h4 class="contentBlock__smallTitle">Core Skills</h4>\n              <ul class="cvlist">\n                <li class="cvlist__item cvlist__item--tag">HTML</li>\n                <li class="cvlist__item cvlist__item--tag">CSS / SCSS</li>\n                <li class="cvlist__item cvlist__item--tag">\n                  JavaScript ES6\n                </li>\n                <li class="cvlist__item cvlist__item--tag">UX / UI</li>\n                <li class="cvlist__item cvlist__item--tag">\n                  Web performance\n                </li>\n                <li class="cvlist__item cvlist__item--tag">Git</li>\n                <li class="cvlist__item cvlist__item--tag">Command Line</li>\n                <li class="cvlist__item cvlist__item--tag">\n                  Fluent English / Native Italian\n                </li>\n              </ul>\n            </div>\n            <div class="contentBlock__column">\n              <h4 class="contentBlock__smallTitle">Frameworks & more</h4>\n              <ul class="cvlist">\n                <li class="cvlist__item cvlist__item--tag">\n                  React / Redux\n                </li>\n                <li class="cvlist__item cvlist__item--tag">Express.js</li>\n                <li class="cvlist__item cvlist__item--tag">jQuery</li>\n                <li class="cvlist__item cvlist__item--tag">\n                  WordPress / WooCommerce\n                </li>\n                <li class="cvlist__item cvlist__item--tag">\n                  Gulp / Grunt / NPM scripts\n                </li>\n                <li class="cvlist__item cvlist__item--tag">Linters</li>\n                <li class="cvlist__item cvlist__item--tag">\n                  Scrum / Agile methodologies\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class="contentBlock">\n        <h2 class="contentBlock__title">Get in touch</h2>\n        <div class="contentBlock__description">\n            You can follow me and message me on <a class="link" href="https://twitter.com/akmur">Twitter</a>, <a class="link" href="https://webdev.network/@akmur">Mastodon</a>, <a class="link" href="https://www.linkedin.com/in/alessandromuraro/">Linkedin</a> or <a class="link" href="https://github.com/akmur">Github</a>.\n        </div>\n      </div>\n      <div class="contentBlock">\n        <div class="actions">\n          <a\n            href="https://www.dropbox.com/s/vlqweze4o9kzwf9/Resume%20Alessandro%20Muraro.pdf?dl=0"\n            target="_blank"\n            rel="noopener noreferrer"\n            class="actions__cta button"\n          >\n            Download CV\n          </a>\n          <a\n            href="https://www.linkedin.com/in/alessandromuraro/"\n            target="_blank"\n            rel="noopener noreferrer"\n            class="actions__cta link"\n          >\n            Go to Linkedin\n          </a>\n        </div>\n      </div>\n    </div>\n  ');
+  document.querySelector('#nav').innerHTML = (0, _Header2.default)();
+  (0, _render2.default)('#content', '\n    <div class="pageContent">\n      <div class="contentBlock">\n        <h2 class="contentBlock__title">Who I am</h2>\n        <div class="contentBlock__description">\n          I am a frontend developer born in \n          <a\n            target="blank"\n            rel="noopener noreferrer"\n            href="https://www.google.de/maps/place/Milan,+Metropolitan+City+of+Milan,+Italy/data=!4m2!3m1!1s0x4786c1493f1275e7:0x3cffcd13c6740e8d?sa=X&ved=2ahUKEwjn94f73Y_eAhWihqYKHc2yAnAQ8gEwAHoECAAQAQ"\n          >\n            Milano, Italy\n          </a>\n          , and currently based in \n          <a\n            href="https://www.google.de/maps/place/Aachen/@50.7595961,5.9564421,11z/data=!3m1!4b1!4m5!3m4!1s0x47c0997cb08a191d:0x63a30eae0b0e444f!8m2!3d50.7753455!4d6.0838868"\n            target="blank"\n            rel="noopener noreferrer"\n          >\n            Aachen, Germany\n          </a>\n          <br />I started hacking away at the web back in 1999, but it was just\n          my hobby for many years. In 2011, I started my professional career in\n          frontend development. <br />\n          Over the last 15 (!) years or so, I have been living around Europe:\n          Italy \n          <span role="img" aria-label="italian flag">\n            \uD83C\uDDEE\uD83C\uDDF9\n          </span>\n          , the Netherlands \n          <span role="img" aria-label="dutch flag">\n            \uD83C\uDDF3\uD83C\uDDF1\n          </span>\n          , Ireland \n          <span role="img" aria-label="irish flag">\n            \uD83C\uDDEE\uD83C\uDDEA\n          </span>\n          , and now Germany \n          <span role="img" aria-label="german flag">\n            \uD83C\uDDE9\uD83C\uDDEA\n          </span>, where I live with my wife Antonella, my kid Matteo, and my dogs Mela and Tobi.\n        </div>\n      </div>\n      <div class="contentBlock">\n        <div class="avatar">\n          <img src="https://filedn.com/lmWxu5DGgw0FbsUS7mWpc3S/site-image.jpg" />\n        </div>\n      </div>\n      <div class="contentBlock">\n        <h2 class="contentBlock__title">What I do</h2>\n        <div class="contentBlock__description">\n          I am experienced in dealing with complex and/or legacy codebases,\n          which I love to refactor and get back into shape. I\'m always learning\n          new technologies which I apply responsibly, careful not to create\n          technical debt. I specialize in coding modular, component-based\n          websites. I am passionate about clean, maintainable, readable code and\n          I fight the good fight against \n          <a\n            href="https://en.wikipedia.org/wiki/Software_entropy"\n            rel="noopener noreferrer"\n            target="_blank"\n          >software entropy</a>.\n        </div>\n      </div>\n      <div class="contentBlock">\n        <h2 class="contentBlock__title">What I\'ve done</h2>\n        <div class="contentBlock__description">\n          <ul class="cvlist">\n            <li class="cvlist__item">\n              <a class="link" href="http://navabi.de/" target="blank">navabi GmbH</a> \n              \uD83C\uDDE9\uD83C\uDDEA, Frontend developer, Since April 2017\n            </li>\n            <li class="cvlist__item">\n              <a\n                class="link"\n                href="http://www.objectway.it/IT/default.asp"\n                target="blank"\n              >Objectway</a> \uD83C\uDDEE\uD83C\uDDF9 Frontend developer, 2015 to 2017\n            </li>\n            <li class="cvlist__item">\n              <a\n                class="link"\n                href="http://www.thelevelgroup.com/"\n                target="blank"\n              >The Level Group</a> \uD83C\uDDEE\uD83C\uDDF9 Frontend developer, 2014 to 2015\n            </li>\n            <li class="cvlist__item">\n              <a class="link" href="http://www.pazienti.it/" target="blank">Pazienti</a> \n              \uD83C\uDDEE\uD83C\uDDF9 Frontend developer / UX / UI, 2011 to 2014\n            </li>\n            <li class="cvlist__item">\n              <a class="link" href="http://www.apple.com/" target="blank">\n                Apple</a> \uD83C\uDDEE\uD83C\uDDEA Tech support, 2003 to 2007\n            </li>\n            <li class="cvlist__item">\n              <a class="link" href="http://www.unisys.com/" target="blank">Unisys</a> \uD83C\uDDF3\uD83C\uDDF1 Tech support, 2001 to 2003\n            </li>\n          </ul>\n        </div>\n      </div>\n      <div class="contentBlock">\n        <h3 class="contentBlock__title">What I know</h3>\n        <div class="contentBlock__description">\n          <div class="contentBlock__columnWrapper">\n            <div class="contentBlock__column">\n              <h4 class="contentBlock__smallTitle">Core Skills</h4>\n              <ul class="cvlist">\n                <li class="cvlist__item cvlist__item--tag">HTML</li>\n                <li class="cvlist__item cvlist__item--tag">CSS / SCSS</li>\n                <li class="cvlist__item cvlist__item--tag">\n                  JavaScript ES6\n                </li>\n                <li class="cvlist__item cvlist__item--tag">UX / UI</li>\n                <li class="cvlist__item cvlist__item--tag">\n                  Web performance\n                </li>\n                <li class="cvlist__item cvlist__item--tag">Git</li>\n                <li class="cvlist__item cvlist__item--tag">Command Line</li>\n                <li class="cvlist__item cvlist__item--tag">\n                  Fluent English / Native Italian\n                </li>\n              </ul>\n            </div>\n            <div class="contentBlock__column">\n              <h4 class="contentBlock__smallTitle">Frameworks & more</h4>\n              <ul class="cvlist">\n                <li class="cvlist__item cvlist__item--tag">\n                  React / Redux\n                </li>\n                <li class="cvlist__item cvlist__item--tag">Express.js</li>\n                <li class="cvlist__item cvlist__item--tag">jQuery</li>\n                <li class="cvlist__item cvlist__item--tag">\n                  WordPress / WooCommerce\n                </li>\n                <li class="cvlist__item cvlist__item--tag">\n                  Gulp / Grunt / NPM scripts\n                </li>\n                <li class="cvlist__item cvlist__item--tag">Linters</li>\n                <li class="cvlist__item cvlist__item--tag">\n                  Scrum / Agile methodologies\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class="contentBlock">\n        <h2 class="contentBlock__title">Get in touch</h2>\n        <div class="contentBlock__description">\n            You can follow me and message me on <a class="link" href="https://twitter.com/akmur">Twitter</a>, <a class="link" href="https://webdev.network/@akmur">Mastodon</a>, <a class="link" href="https://www.linkedin.com/in/alessandromuraro/">Linkedin</a> or <a class="link" href="https://github.com/akmur">Github</a>.\n        </div>\n      </div>\n      <div class="contentBlock">\n        <div class="actions">\n          <a\n            href="https://www.dropbox.com/s/vlqweze4o9kzwf9/Resume%20Alessandro%20Muraro.pdf?dl=0"\n            target="_blank"\n            rel="noopener noreferrer"\n            class="actions__cta button"\n          >\n            Download CV\n          </a>\n          <a\n            href="https://www.linkedin.com/in/alessandromuraro/"\n            target="_blank"\n            rel="noopener noreferrer"\n            class="actions__cta link"\n          >\n            Go to Linkedin\n          </a>\n        </div>\n      </div>\n    </div>\n  ');
 }
-},{"../helpers/render":"src/helpers/render.js"}],"src/components/Contacts.js":[function(require,module,exports) {
+},{"./Header":"src/components/Header.js","../helpers/render":"src/helpers/render.js"}],"src/components/Contacts.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -160,13 +165,18 @@ var _render = require('../helpers/render');
 
 var _render2 = _interopRequireDefault(_render);
 
+var _Header = require('./Header');
+
+var _Header2 = _interopRequireDefault(_Header);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Contacts() {
   document.title = 'Contacts - Alessandro Muraro - Frontend Developer';
+  document.querySelector('#nav').innerHTML = (0, _Header2.default)();
   (0, _render2.default)('#content', '\n    <div class="pageContent">\n      <div class="contentBlock">\n        <h2 class="contentBlock__title">Get in touch</h2>\n        <div class="contentBlock__description">\n            You can follow and message me on <a class="link" href="https://twitter.com/akmur">Twitter</a>, <a class="link" href="https://webdev.network/@akmur">Mastodon</a>, <a class="link" href="https://www.linkedin.com/in/alessandromuraro/">Linkedin</a> or <a class="link" href="https://github.com/akmur">Github</a>.\n        </div>\n      </div>\n    </div>\n  ');
 }
-},{"../helpers/render":"src/helpers/render.js"}],"src/helpers/utils.js":[function(require,module,exports) {
+},{"../helpers/render":"src/helpers/render.js","./Header":"src/components/Header.js"}],"src/helpers/utils.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -284,6 +294,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = PostsList;
 
+var _Header = require('./Header');
+
+var _Header2 = _interopRequireDefault(_Header);
+
 var _getPostsListJson = require('../helpers/getPostsListJson');
 
 var _utils = require('../helpers/utils');
@@ -306,6 +320,8 @@ _dayjs2.default.extend(_relativeTime2.default);
 
 function PostsList() {
   document.title = 'Posts - Alessandro Muraro - Frontend Developer';
+  document.querySelector('#nav').innerHTML = (0, _Header2.default)();
+
   (0, _getPostsListJson.getPostsListJson)().then(function (response) {
     var posts = response.map(function (item, index) {
       var itemLink = '/posts/' + item.githubLink;
@@ -319,7 +335,7 @@ function PostsList() {
     (0, _render2.default)('#content', html);
   });
 }
-},{"../helpers/getPostsListJson":"src/helpers/getPostsListJson.js","../helpers/utils":"src/helpers/utils.js","dayjs":"node_modules/dayjs/dayjs.min.js","../helpers/render":"src/helpers/render.js","dayjs/plugin/relativeTime":"node_modules/dayjs/plugin/relativeTime.js"}],"src/helpers/getPostJson.js":[function(require,module,exports) {
+},{"./Header":"src/components/Header.js","../helpers/getPostsListJson":"src/helpers/getPostsListJson.js","../helpers/utils":"src/helpers/utils.js","dayjs":"node_modules/dayjs/dayjs.min.js","../helpers/render":"src/helpers/render.js","dayjs/plugin/relativeTime":"node_modules/dayjs/plugin/relativeTime.js"}],"src/helpers/getPostJson.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2861,6 +2877,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = PostSingle;
 
+var _Header = require('./Header');
+
+var _Header2 = _interopRequireDefault(_Header);
+
 var _render = require('../helpers/render');
 
 var _render2 = _interopRequireDefault(_render);
@@ -2890,13 +2910,14 @@ function PostSingle(githubLink) {
     var date = (0, _dayjs2.default)().to((0, _dayjs2.default)((0, _utils.onlyDate)(githubLink)));
     var content = _markdown.markdown.toHTML(item);
     document.title = title + ' - Alessandro Muraro - Frontend Developer';
+    document.querySelector('#nav').innerHTML = (0, _Header2.default)();
 
     var html = '\n      <div class="pageContent pageContent--post">\n        <h1 class="pageContent__title title title--h1">' + title + '</h1>\n        <div class="pageContent__date date">' + date + '</div>\n        <div class="pageContent__content">' + content + '</div>\n      </div>\n    ';
 
     (0, _render2.default)('#content', html);
   });
 }
-},{"../helpers/render":"src/helpers/render.js","../helpers/utils":"src/helpers/utils.js","../helpers/getPostJson":"src/helpers/getPostJson.js","markdown":"node_modules/markdown/lib/index.js","dayjs":"node_modules/dayjs/dayjs.min.js","dayjs/plugin/relativeTime":"node_modules/dayjs/plugin/relativeTime.js"}],"src/components/Home.js":[function(require,module,exports) {
+},{"./Header":"src/components/Header.js","../helpers/render":"src/helpers/render.js","../helpers/utils":"src/helpers/utils.js","../helpers/getPostJson":"src/helpers/getPostJson.js","markdown":"node_modules/markdown/lib/index.js","dayjs":"node_modules/dayjs/dayjs.min.js","dayjs/plugin/relativeTime":"node_modules/dayjs/plugin/relativeTime.js"}],"src/components/Home.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2908,14 +2929,19 @@ var _render = require('../helpers/render');
 
 var _render2 = _interopRequireDefault(_render);
 
+var _Header = require('./Header');
+
+var _Header2 = _interopRequireDefault(_Header);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Home() {
   document.title = 'Alessandro Muraro - Frontend Developer';
-  var html = '\n  <div class="pageHome">\n    <div class="contentBlock contentBlock--home">\n      <div class="contentBlock__preTitle u-center">\n        Hi there, I\'m Alessandro Muraro.\n      </div>\n      <h1 class="contentBlock__title u-center">\n        I\'m a frontend developer, I make websites.\n        <span class="emoji" role="img" aria-label="waving hand">\n          \uD83D\uDC4B\n        </span>\n      </h1>\n    </div>\n  </div>\n  ';
+  document.querySelector('#nav').innerHTML = (0, _Header2.default)();
+  var html = '\n  <div class="pageHome">\n    <div class="contentBlock contentBlock--home">\n      <div class="contentBlock__preTitle u-center">\n        Hi there, I\'m Alessandro Muraro.\n      </div>\n      <h1 class="contentBlock__title u-center">\n        I\'m a frontend developer,<br />I make websites.\n        <span class="emoji" role="img" aria-label="waving hand">\n          \uD83D\uDC4B\n        </span>\n      </h1>\n    </div>\n  </div>\n  ';
   (0, _render2.default)('#content', html);
 }
-},{"../helpers/render":"src/helpers/render.js"}],"src/components/Switch.js":[function(require,module,exports) {
+},{"../helpers/render":"src/helpers/render.js","./Header":"src/components/Header.js"}],"src/components/Switch.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2936,7 +2962,8 @@ function Switch() {
   }
 
   switchTrigger.addEventListener('click', function () {
-    var newTheme = event.target.getAttribute('data-theme') === 'ui-light' ? 'ui-dark' : 'ui-light';
+    event.target.blur();
+    var newTheme = switchTrigger.getAttribute('data-theme') === 'ui-light' ? 'ui-dark' : 'ui-light';
     switchTrigger.setAttribute('data-theme', newTheme);
     body.className = newTheme;
     localStorage.setItem('theme', newTheme);
@@ -2954,10 +2981,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = App;
-
-var _Header = require('./components/Header');
-
-var _Header2 = _interopRequireDefault(_Header);
 
 var _About = require('./components/About');
 
@@ -2998,8 +3021,6 @@ var useHash = false; // Defaults to: false
 var router = new _navigo2.default(root);
 
 function App() {
-  document.querySelector('#nav').innerHTML = (0, _Header2.default)();
-
   (0, _Switch2.default)();
 
   router.on({
@@ -3020,7 +3041,7 @@ function App() {
     }
   }).resolve();
 }
-},{"./components/Header":"src/components/Header.js","./components/About":"src/components/About.js","./components/Contacts":"src/components/Contacts.js","./components/PostsList":"src/components/PostsList.js","./components/PostSingle":"src/components/PostSingle.js","./components/Home":"src/components/Home.js","./helpers/render":"src/helpers/render.js","./components/Switch":"src/components/Switch.js","navigo":"node_modules/navigo/lib/navigo.min.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./components/About":"src/components/About.js","./components/Contacts":"src/components/Contacts.js","./components/PostsList":"src/components/PostsList.js","./components/PostSingle":"src/components/PostSingle.js","./components/Home":"src/components/Home.js","./helpers/render":"src/helpers/render.js","./components/Switch":"src/components/Switch.js","navigo":"node_modules/navigo/lib/navigo.min.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -3127,7 +3148,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '55181' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '57322' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
