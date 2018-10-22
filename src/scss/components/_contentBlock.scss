@@ -6,12 +6,13 @@
   &--home {
     margin: 0 auto;
     transform: translateY(-50%);
+    max-width: 40em;
   }
 }
 
 .contentBlock__preTitle {
   color: get-color(accent);
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 700;
   margin-bottom: 0.5em;
   text-transform: uppercase;
