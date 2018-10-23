@@ -77,7 +77,7 @@ export default function About() {
           <ul class="cvlist">
             <li class="cvlist__item">
               <a class="link" href="http://navabi.de/" target="blank">navabi GmbH</a> 
-              🇩🇪, Frontend developer, Since April 2017
+              🇩🇪 Frontend developer, Since April 2017
             </li>
             <li class="cvlist__item">
               <a
