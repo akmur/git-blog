@@ -13,7 +13,7 @@ export default function PostsList() {
   getPostsListJson().then(response => {
     const posts = response
       .map((item, index) => {
-        const itemLink = `/posts/${item.githubLink}`
+        const itemLink = `/#!/posts/${item.githubLink}`
         const itemTitle = item.title
         const itemDate = dayjs().to(dayjs(onlyDate(item.githubLink)))
         return `
