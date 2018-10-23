@@ -21,10 +21,10 @@ export default function Header() {
           <a href="/" class="nav__link">Home</a>
         </li>
         <li class="nav__item">
-          <a href="/about" class="nav__link">About</a>
+          <a href="/#!/about" class="nav__link">About</a>
         </li>
         <li class="nav__item">
-          <a href="/posts" class="nav__link">Posts</a>
+          <a href="/#!/posts" class="nav__link">Posts</a>
         </li>
       </ul>
     </nav>
