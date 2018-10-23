@@ -4,6 +4,7 @@ import render from '../helpers/render'
 export default function About() {
   document.title = 'About - Alessandro Muraro - Frontend Developer'
   document.querySelector('#nav').innerHTML = Header()
+  window.scrollTo(0, 0)
   render(
     '#content',
     `

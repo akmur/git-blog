@@ -4,6 +4,7 @@ import Header from './Header'
 export default function Home() {
   document.title = 'Alessandro Muraro - Frontend Developer'
   document.querySelector('#nav').innerHTML = Header()
+  window.scrollTo(0, 0)
   const html = `
   <div class="pageHome">
     <div class="contentBlock contentBlock--home">

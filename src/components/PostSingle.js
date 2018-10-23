@@ -24,6 +24,7 @@ export default function PostSingle(githubLink) {
       </div>
     `
 
+    window.scrollTo(0, 0)
     render('#content', html)
   })
 }

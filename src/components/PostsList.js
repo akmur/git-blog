@@ -35,6 +35,7 @@ export default function PostsList() {
       </div>
     `
 
+    window.scrollTo(0, 0)
     render('#content', html)
   })
 }

@@ -1,5 +1,4 @@
 import About from './components/About'
-import Contacts from './components/Contacts'
 import PostsList from './components/PostsList'
 import PostSingle from './components/PostSingle'
 import Home from './components/Home'
@@ -18,9 +17,6 @@ export default function App() {
     .on({
       about: function() {
         About()
-      },
-      contacts: function() {
-        Contacts()
       },
       posts: function() {
         PostsList()
