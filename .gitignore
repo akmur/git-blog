@@ -60,7 +60,7 @@ node_modules
 # Production #
 ######################
 /build
-
+/dist
 
 # Logs #
 ######################
