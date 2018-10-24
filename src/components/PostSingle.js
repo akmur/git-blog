@@ -26,5 +26,11 @@ export default function PostSingle(githubLink) {
 
     window.scrollTo(0, 0)
     render('#content', html)
+
+    const allCode = document.querySelectorAll('code')
+    for (let index = 0; index < allCode.length; index++) {
+      const element = allCode[index]
+      hljs.highlightBlock(element)
+    }
   })
 }
