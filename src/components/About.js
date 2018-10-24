@@ -12,7 +12,7 @@ export default function About() {
       <div class="contentBlock">
         <h2 class="contentBlock__title">Who I am</h2>
         <div class="contentBlock__description">
-          I am a frontend developer born in 
+          I am a frontend developer born in
           <a
             target="blank"
             rel="noopener noreferrer"
@@ -20,7 +20,7 @@ export default function About() {
           >
             Milano, Italy
           </a>
-          , and currently based in 
+          , and currently based in
           <a
             href="https://www.google.de/maps/place/Aachen/@50.7595961,5.9564421,11z/data=!3m1!4b1!4m5!3m4!1s0x47c0997cb08a191d:0x63a30eae0b0e444f!8m2!3d50.7753455!4d6.0838868"
             target="blank"
@@ -32,19 +32,19 @@ export default function About() {
           my hobby for many years. In 2011, I started my professional career in
           frontend development. <br />
           Over the last 15 (!) years or so, I have been living around Europe:
-          Italy 
+          Italy
           <span role="img" aria-label="italian flag">
             🇮🇹
           </span>
-          , the Netherlands 
+          , the Netherlands
           <span role="img" aria-label="dutch flag">
             🇳🇱
           </span>
-          , Ireland 
+          , Ireland
           <span role="img" aria-label="irish flag">
             🇮🇪
           </span>
-          , and now Germany 
+          , and now Germany
           <span role="img" aria-label="german flag">
             🇩🇪
           </span>, where I live with my wife Antonella, my kid Matteo, and my dogs Mela and Tobi.
@@ -63,7 +63,7 @@ export default function About() {
           new technologies which I apply responsibly, careful not to create
           technical debt. I specialize in coding modular, component-based
           websites. I am passionate about clean, maintainable, readable code and
-          I fight the good fight against 
+          I fight the good fight against
           <a
             href="https://en.wikipedia.org/wiki/Software_entropy"
             rel="noopener noreferrer"
@@ -76,7 +76,7 @@ export default function About() {
         <div class="contentBlock__description">
           <ul class="cvlist">
             <li class="cvlist__item">
-              <a class="link" href="http://navabi.de/" target="blank">navabi GmbH</a> 
+              <a class="link" href="http://navabi.de/" target="blank">navabi GmbH</a>
               🇩🇪 Frontend developer, Since April 2017
             </li>
             <li class="cvlist__item">
@@ -94,7 +94,7 @@ export default function About() {
               >The Level Group</a> 🇮🇹 Frontend developer, 2014 to 2015
             </li>
             <li class="cvlist__item">
-              <a class="link" href="http://www.pazienti.it/" target="blank">Pazienti</a> 
+              <a class="link" href="http://www.pazienti.it/" target="blank">Pazienti</a>
               🇮🇹 Frontend developer / UX / UI, 2011 to 2014
             </li>
             <li class="cvlist__item">
@@ -160,6 +160,10 @@ export default function About() {
         </div>
       </div>
       <div class="contentBlock">
+        <h2 class="contentBlock__title">My resume</h2>
+        <div class="contentBlock__description">
+            Want to know more?<br />Here you can download my curriculum vitae in PDF format, or go to Linkedin to learn even more about me, and connect if you feel like it.
+        </div>
         <div class="actions">
           <a
             href="https://www.dropbox.com/s/vlqweze4o9kzwf9/Resume%20Alessandro%20Muraro.pdf?dl=0"
