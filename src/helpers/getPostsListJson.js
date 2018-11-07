@@ -1,20 +1,28 @@
+const contentful = require('contentful')
+
+var client = contentful.createClient({
+  space: 'bay2fsdnii25',
+  accessToken:
+    '8cbf93b4dff85728fdb9940020e32848f9e0375134763725f7d46d0d917f699d'
+})
+
 import { onlyTitle, onlyDate, removeExtension } from './utils'
 
-function fetchUrl(url) {
-  return fetch(url)
-    .then(response => response.json())
-    .then(myJson => {
-      sessionStorage.setItem('postsList', JSON.stringify(myJson))
-      return myJson
-        .map(item => {
-          return {
-            title: onlyTitle(item.name),
-            date: onlyDate(item.name),
-            githubLink: removeExtension(item.name)
-          }
-        })
-        .reverse()
-    })
+function fetchUrl() {
+  return client.getEntries().then(entries => {
+    sessionStorage.setItem('postsList', JSON.stringify(entries))
+    return entries.items
+      .map(entry => {
+        return {
+          title: entry.fields.title,
+          date: entry.fields.date,
+          githubLink: entry.fields.slug
+        }
+      })
+      .sort(function(a, b) {
+        return new Date(b.date) - new Date(a.date)
+      })
+  })
 }
 
 function fetchSession(storedJson) {
@@ -22,28 +30,29 @@ function fetchSession(storedJson) {
     resolve(storedJson)
   })
 
-  return sessionPromise.then(sessionJSON => {
-    const myJson = JSON.parse(sessionJSON)
-    return myJson
-      .map(item => {
+  return sessionPromise.then(storedJson => {
+    const entries = JSON.parse(storedJson)
+    return entries.items
+      .map(entry => {
         return {
-          title: onlyTitle(item.name),
-          date: onlyDate(item.name),
-          githubLink: removeExtension(item.name)
+          title: entry.fields.title,
+          date: entry.fields.date,
+          githubLink: entry.fields.slug
         }
       })
-      .reverse()
+      .sort(function(a, b) {
+        return new Date(b.date) - new Date(a.date)
+      })
   })
 }
 
-export function getPostsListJson(slug) {
-  const url = 'https://api.github.com/repos/akmur/mdposts/contents/posts/'
+export function getPostsListJson() {
   const storedJson = sessionStorage.getItem('postsList')
 
-  // check if value is in local storage
+  // // check if value is in local storage
   if (storedJson) {
     return fetchSession(storedJson)
   } else {
-    return fetchUrl(url)
+    return fetchUrl()
   }
 }
