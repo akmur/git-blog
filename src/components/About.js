@@ -12,22 +12,19 @@ export default function About() {
       <div class="contentBlock">
         <h2 class="contentBlock__title">Who I am</h2>
         <div class="contentBlock__description">
-          I am a frontend developer born in
+          I am <span class="u-strong">Alessandro Muraro</span>, a frontend developer from
           <a
             target="blank"
             rel="noopener noreferrer"
             href="https://www.google.de/maps/place/Milan,+Metropolitan+City+of+Milan,+Italy/data=!4m2!3m1!1s0x4786c1493f1275e7:0x3cffcd13c6740e8d?sa=X&ved=2ahUKEwjn94f73Y_eAhWihqYKHc2yAnAQ8gEwAHoECAAQAQ"
-          >
-            Milano, Italy
-          </a>
-          , and currently based in
+          >Milano, Italy</a> currently based in
           <a
             href="https://www.google.de/maps/place/Aachen/@50.7595961,5.9564421,11z/data=!3m1!4b1!4m5!3m4!1s0x47c0997cb08a191d:0x63a30eae0b0e444f!8m2!3d50.7753455!4d6.0838868"
             target="blank"
             rel="noopener noreferrer"
           >
             Aachen, Germany
-          </a>
+          </a>.
           <br />I started hacking away at the web back in 1999, but it was just
           my hobby for many years. In 2011, I started my professional career in
           frontend development. <br />

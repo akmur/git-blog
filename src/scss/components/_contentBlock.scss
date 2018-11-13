@@ -51,6 +51,13 @@
 
   @media screen and (min-width: $medium) {
     flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contentBlock__column {
+  @media screen and (min-width: $medium) {
+    width: 45%;
   }
 }
 
