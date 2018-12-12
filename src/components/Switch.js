@@ -4,8 +4,8 @@ export default function Switch() {
 
   const currentTheme = localStorage.getItem('theme')
   if (!currentTheme) {
-    body.classList.add('ui-light')
-    switchTrigger.setAttribute('data-theme', 'ui-light')
+    body.classList.add('ui-dark')
+    switchTrigger.setAttribute('data-theme', 'ui-dark')
   } else {
     body.classList.add(currentTheme)
     switchTrigger.setAttribute('data-theme', currentTheme)

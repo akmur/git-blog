@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "clean": "rimraf ./dist/*.map ./dist/*.js ./dist/*.html ./dist/*.css ./dist/*.webmanifest",
+    "build": "npm run clean && parcel build index.html"
   },
   "dependencies": {
     "dayjs": "1.7.5",
@@ -18,7 +19,8 @@
     "contentful": "^7.0.5",
     "node-sass": "^4.9.3",
     "nodemon": "^1.18.4",
-    "parcel-bundler": "^1.6.1"
+    "parcel-bundler": "^1.6.1",
+    "rimraf": "^2.6.2"
   },
   "keywords": []
 }
