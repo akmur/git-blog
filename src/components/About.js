@@ -73,8 +73,12 @@ export default function About() {
         <div class="contentBlock__description">
           <ul class="cvlist">
             <li class="cvlist__item">
+              <a class="link" href="https://energieloft.de/de/startseite/" target="blank">Innoloft GmbH</a>
+              🇩🇪 Senior Frontend developer, since December 2017
+            </li>
+            <li class="cvlist__item">
               <a class="link" href="http://navabi.de/" target="blank">navabi GmbH</a>
-              🇩🇪 Frontend developer, Since April 2017
+              🇩🇪 Senior Frontend developer, 2016 to 2017
             </li>
             <li class="cvlist__item">
               <a
@@ -139,7 +143,7 @@ export default function About() {
                   WordPress / WooCommerce
                 </li>
                 <li class="cvlist__item cvlist__item--tag">
-                  Gulp / Grunt / NPM scripts
+                  Gulp / NPM scripts / webpack
                 </li>
                 <li class="cvlist__item cvlist__item--tag">Linters</li>
                 <li class="cvlist__item cvlist__item--tag">
