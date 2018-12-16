@@ -124,9 +124,6 @@ export default function About() {
                   JavaScript ES6
                 </li>
                 <li class="cvlist__item cvlist__item--tag">UX / UI</li>
-                <li class="cvlist__item cvlist__item--tag">
-                  Web performance
-                </li>
                 <li class="cvlist__item cvlist__item--tag">Git</li>
                 <li class="cvlist__item cvlist__item--tag">Command Line</li>
                 <li class="cvlist__item cvlist__item--tag">
@@ -150,7 +147,10 @@ export default function About() {
                 </li>
                 <li class="cvlist__item cvlist__item--tag">jQuery</li>
                 <li class="cvlist__item cvlist__item--tag">
-                  WordPress / WooCommerce
+                  Basic DevOps
+                </li>
+                <li class="cvlist__item cvlist__item--tag">
+                  Web performances
                 </li>
               </ul>
             </div>
