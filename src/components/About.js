@@ -69,13 +69,16 @@ export default function About() {
         </div>
       </div>
       <div class="contentBlock">
+        <h2 class="contentBlock__title">What I'm Doing</h2>
+        <div class="contentBlock__description">
+          Since December 2017 I am working at <a class="link" href="https://energieloft.de/de/startseite/" target="blank">Energieloft</a>
+          in Aachen, Germany 🇩🇪 as Senior Frontend developer. I take care of frontend architecture and UI development.
+        </div>
+      </div>
+      <div class="contentBlock">
         <h2 class="contentBlock__title">What I've done</h2>
         <div class="contentBlock__description">
           <ul class="cvlist">
-            <li class="cvlist__item">
-              <a class="link" href="https://energieloft.de/de/startseite/" target="blank">Innoloft GmbH</a>
-              🇩🇪 Senior Frontend developer, since December 2017
-            </li>
             <li class="cvlist__item">
               <a class="link" href="http://navabi.de/" target="blank">navabi GmbH</a>
               🇩🇪 Senior Frontend developer, 2016 to 2017
@@ -127,7 +130,7 @@ export default function About() {
                 <li class="cvlist__item cvlist__item--tag">Git</li>
                 <li class="cvlist__item cvlist__item--tag">Command Line</li>
                 <li class="cvlist__item cvlist__item--tag">
-                  Fluent English / Native Italian
+                  Fluent English / Native Italian / Basic German
                 </li>
               </ul>
             </div>
@@ -138,16 +141,16 @@ export default function About() {
                   React / Redux
                 </li>
                 <li class="cvlist__item cvlist__item--tag">Express.js</li>
-                <li class="cvlist__item cvlist__item--tag">jQuery</li>
-                <li class="cvlist__item cvlist__item--tag">
-                  WordPress / WooCommerce
-                </li>
                 <li class="cvlist__item cvlist__item--tag">
                   Gulp / NPM scripts / webpack
                 </li>
                 <li class="cvlist__item cvlist__item--tag">Linters</li>
                 <li class="cvlist__item cvlist__item--tag">
                   Scrum / Agile methodologies
+                </li>
+                <li class="cvlist__item cvlist__item--tag">jQuery</li>
+                <li class="cvlist__item cvlist__item--tag">
+                  WordPress / WooCommerce
                 </li>
               </ul>
             </div>

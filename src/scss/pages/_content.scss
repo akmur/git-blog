@@ -25,10 +25,11 @@
 }
 
 .pageContent__title {
-  font-size: 2em;
+  font-size: 2.5em;
+  margin-top: 0;
 
   @media screen and (min-width: $small) {
-    font-size: 2.5em;
+    margin-top: 0.67em;
   }
 
   @media screen and (min-width: $medium) {
