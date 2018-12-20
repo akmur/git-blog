@@ -14,8 +14,6 @@ export default function PostSingle(slug) {
 
     const postContent = markdown.toHTML(item.fields.markdown)
 
-    console.log(item)
-
     document.title = `${title} - Alessandro Muraro - Frontend Developer`
     document.querySelector('#nav').innerHTML = Header()
 
