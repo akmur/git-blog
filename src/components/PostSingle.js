@@ -1,6 +1,5 @@
 import Header from './Header'
 import render from '../helpers/render'
-import { onlyTitle, onlyDate, removeExtension } from '../helpers/utils'
 import { getPostJson } from '../helpers/getPostJson'
 import { markdown } from 'markdown'
 import dayjs from 'dayjs'
