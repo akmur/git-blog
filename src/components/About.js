@@ -1,9 +1,8 @@
-import Header from './Header'
+
 import render from '../helpers/render'
 
 export default function About() {
   document.title = 'About - Alessandro Muraro - Frontend Developer'
-  document.querySelector('#nav').innerHTML = Header()
   window.scrollTo(0, 0)
   render(
     '#content',
@@ -71,7 +70,7 @@ export default function About() {
       <div class="contentBlock">
         <h2 class="contentBlock__title">What I'm Doing</h2>
         <div class="contentBlock__description">
-          Since December 2017 I am working at <a class="link" href="https://energieloft.de/de/startseite/" target="blank">Energieloft</a>
+          Since December 2018 I am working at <a class="link" href="https://energieloft.de/de/startseite/" target="blank">Energieloft</a>
           in Aachen, Germany 🇩🇪 as Senior Frontend developer. I take care of frontend architecture and UI development.
         </div>
       </div>
@@ -81,7 +80,7 @@ export default function About() {
           <ul class="cvlist">
             <li class="cvlist__item">
               <a class="link" href="http://navabi.de/" target="blank">navabi GmbH</a>
-              🇩🇪 Senior Frontend developer, 2016 to 2017
+              🇩🇪 Senior Frontend developer, 2017 to 2018
             </li>
             <li class="cvlist__item">
               <a
@@ -160,7 +159,7 @@ export default function About() {
       <div class="contentBlock">
         <h2 class="contentBlock__title">Get in touch</h2>
         <div class="contentBlock__description">
-            You can follow me and message me on <a class="link" href="https://twitter.com/akmur">Twitter</a>, <a class="link" href="https://webdev.network/@akmur">Mastodon</a>, <a class="link" href="https://www.linkedin.com/in/alessandromuraro/">Linkedin</a> or <a class="link" href="https://github.com/akmur">Github</a>.
+            You can follow me and message me on <a class="link" href="https://twitter.com/akmur">Twitter</a>, <a class="link" href="https://mastodon.social/@akmur">Mastodon</a>, <a class="link" href="https://www.linkedin.com/in/alessandromuraro/">Linkedin</a> or <a class="link" href="https://github.com/akmur">Github</a>.
         </div>
       </div>
       <div class="contentBlock">

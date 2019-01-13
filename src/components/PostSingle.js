@@ -1,4 +1,3 @@
-import Header from './Header'
 import render from '../helpers/render'
 import { getPostJson } from '../helpers/getPostJson'
 import { markdown } from 'markdown'
@@ -14,7 +13,6 @@ export default function PostSingle(slug) {
     const postContent = markdown.toHTML(item.fields.markdown)
 
     document.title = `${title} - Alessandro Muraro - Frontend Developer`
-    document.querySelector('#nav').innerHTML = Header()
 
     const html = `
       <div class="pageContent pageContent--post">

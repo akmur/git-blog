@@ -15,16 +15,16 @@ export default function App() {
 
   router
     .on({
-      about: function() {
+      'about': function() {
         About()
       },
-      posts: function() {
+      'posts': function() {
         PostsList()
       },
       'posts/:slug': function(params) {
         PostSingle(params.slug)
       },
-      '': function() {
+      '*': function() {
         Home()
       }
     })
